@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sugestão de Filme</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="formulario">
+    <main>
+        <h1 class="page-title">Sugira um Novo Filme para o Catálogo</h1>
+        <form class="movie-form" action="#" method="POST">
+            <fieldset>
+                <legend>Detalhes do Filme</legend>
+                
+                <div class="form-group">
+                    <label for="titulo"> Título Original do Filme:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="titulo-br"> Título em Português (se houver):</label>
+                    <input type="text" id="titulo-br" name="titulo-br">
+                </div>
+
+                <div class="form-group">
+                    <label for="ano"> Ano de Lançamento:</label>
+                    <input type="number" id="ano" name="ano" min="1888" max="2025" value="2024" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="diretor"> Direção:</label>
+                    <input type="text" id="diretor" name="diretor" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="genero"> Gênero:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Selecione um Gênero</option>
+                        <option value="acao">Ação</option>
+                        <option value="comedia">Comédia</option>
+                        <option value="romance">Romance</option>
+                        <option value="infantil">Infantil</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="duracao"> Duração (min):</label>
+                    <input type="range" id="duracao" name="duracao" min="10" max="300" value="90" oninput="this.nextElementSibling.value = this.value">
+                    <output for="duracao">90</output>
+                </div>
+
+                <div class="form-group">
+                    <label for="link-filme"> Link para o Trailer/Página (Opcional):</label>
+                    <input type="url" id="link-filme" name="link-filme">
+                </div>
+                
+                <div class="form-group">
+                    <label for="classificacao-etaria"> Classificação Etária:</label>
+                    <select id="classificacao-etaria" name="classificacao-etaria" onchange="aplicarCor()">
+                        <option value="livre">Livre</option>
+                        <option value="10">10 Anos</option>
+                        <option value="12">12 Anos</option>
+                        <option value="14">14 Anos</option>
+                        <option value="16">16 Anos</option>
+                        <option value="18">18 Anos</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sinopse"> Sinopse (resumo):</label>
+                    <textarea id="sinopse" name="sinopse" rows="4" required></textarea>
+                </div>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Seus Dados</legend>
+
+                <div class="form-group">
+                    <label for="nome-sugestao"> Seu Nome:</label>
+                    <input type="text" id="nome-sugestao" name="nome-sugestao" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email-sugestao"> Seu E-mail (Opcional):</label>
+                    <input type="email" id="email-sugestao" name="email-sugestao">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label for="newsletter"> Deseja receber novidades?</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                </div>
+            </fieldset>
+            
+            <button type="submit">Enviar Sugestão de Filme</button>
+            
+        </form>
+    </main>
+<script>
+    const select = document.getElementById("classificacao-etaria");
+    function aplicarCor() {
+        select.className = "";
+        const valor = select.value;
+        if (valor === "livre") select.classList.add("livre");
+        if (valor === "10") select.classList.add("x10");
+        if (valor === "12") select.classList.add("x12");
+        if (valor === "14") select.classList.add("x14");
+        if (valor === "16") select.classList.add("x16");
+        if (valor === "18") select.classList.add("x18");
+    }
+    aplicarCor(); 
+
+    const duracaoRange = document.getElementById('duracao');
+    const duracaoOutput = duracaoRange.nextElementSibling;
+
+    duracaoRange.oninput = function() {
+        duracaoOutput.value = this.value;
+    }
+</script>
+</body>
+</html>

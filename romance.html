@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Filmes de Romance</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+        }
+
+        li img {
+            width: 230px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        
+        li img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px black;
+        }
+
+        table {
+            margin: 10px auto 0 auto;
+            border-collapse: collapse;
+            width: 230px;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        td, th {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>
+            <a href="https://youtu.be/gY4gIxXmgnA?si=Bu36MVwNrHKKUnQU" target="_blank">
+                <img src="imagens/amor-para-recordar.jpg">
+            </a>
+            <table>
+                <tr><th>Um Amor Para Recordar</th></tr>
+                <tr><td>Landon, um jovem rebelde, se aproxima de Jamie, uma garota gentil que muda sua forma de ver a vida. O relacionamento entre eles transforma Landon, ensinando sobre amor, amadurecimento e empatia.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 41min</td></tr>
+            </table>
+        </li>
+
+        <li>
+            <a href="https://youtu.be/MKJWXVeoLO4?si=0IYP8xQnbHYN3kTD" target="_blank">
+                <img src="imagens/paixao-real.jpg">
+            </a>
+            <table>
+                <tr><th>Paixão Real</th></tr>
+                <tr><td>Kelly e seu pai descobrem que herdaram um reino em um país distante e precisam se adaptar à vida real de realeza. No processo, eles enfrentam desafios de status social, família e novas responsabilidades.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 24min</td></tr>
+            </table>
+        </li>
+
+        <li>
+            <a href="https://youtu.be/25wXYdzGwbM?si=K87yZkqywSVqmqjZ" target="_blank">
+                <img src="imagens/principe-em-minha-vida.jpg">
+            </a>
+            <table>
+                <tr><th>Um Principe em Minha Vida</th></tr>
+                <tr><td>Paige se apaixona por Eddie, um colega que na verdade é um príncipe dinamarquês disfarçado.Quando ele é chamado de volta para assumir o trono, precisa decidir entre ficar com ela ou seguir seus próprios sonhos.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 48min</td></tr>
+            </table>
+        </li>
+    </ul>
+
+</body>
+</html>

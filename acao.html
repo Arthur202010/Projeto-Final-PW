@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Filmes de Ação</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+        }
+        li img {
+            width: 230px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        li img:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 10px black;
+        }
+        table {
+            margin: 10px auto;
+            border-collapse: collapse;
+            width: 230px;
+        }
+        table, td, th {
+            border: 1px solid black;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>
+            <a href="https://youtu.be/vUtmQH5o5KE?si=TG3H-2-Tdn_Ekbub" target="_blank">
+                <img src="imagens/dose-dupla.jpg">
+            </a>
+            <table>
+                <tr><th>Dose Dupla</th></tr>
+                <tr><td>Após sofrer uma grande perda, Wick inicia uma caçada mortal por vingança.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 41min</td></tr>
+            </table>
+        </li>
+
+        <li>
+            <a href="https://youtu.be/3t6A9TZ4uhs?si=5JNERHJav6drSAfC" target="_blank">
+                <img src="imagens/truque-de-mestre.jpg">
+            </a>
+            <table>
+                <tr><th>Truque de Mestre</th></tr>
+                <tr><td>Um time de especialistas invade sonhos para instalar uma ideia no subconsciente.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>2h 28min</td></tr>
+            </table>
+        </li>
+
+        <li>
+            <a href="https://youtu.be/MhBy7DL34Do?si=0B6SeoHBDkyd6brz" target="_blank">
+                <img src="imagens/missao-quase-impossivel.jpg">
+            </a>
+            <table>
+                <tr><th>Missão Quase Impossível</th></tr>
+                <tr><td> Um ex-espião, aceita cuidar dos filhos de sua namorada. Contudo, ele precisa protege-las de inimigos que descobrem sua identidade.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 34min</td></tr>
+            </table>
+        </li>
+    </ul>
+
+</body>
+</html>
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Filmes de Comedia</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+        }
+
+        li img {
+            width: 230px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        
+        li img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px black;
+        }
+
+        table {
+            margin: 10px auto 0 auto;
+            border-collapse: collapse;
+            width: 230px;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        td, th {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>
+            <a href="https://youtu.be/UObB2XGqi-Q?si=DRTMgPhfsC_DIJG8" target="_blank">
+                <img src="imagens/gente-grande.jpg">
+            </a>
+            <table>
+                <tr><th>Gente Grande</th></tr>
+                <tr><td>Cinco amigos de infância se reencontram após anos para passar um fim de semana juntos com suas famílias. Lá, eles percebem que, mesmo adultos, ainda têm muito a aprender sobre amizade e diversão.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 47min</td></tr>
+            </table>
+        </li>
+
+        <li>
+            <a href="https://youtu.be/VED9wfIPSAw?si=1EruqwSG-ptgc2Px" target="_blank">
+                <img src="imagens/click.jpg">
+            </a>
+            <table>
+                <tr><th>Click</th></tr>
+                <tr><td>Michael Newman ganha um controle remoto mágico que permite avançar e pausar momentos da vida. Ao abusar dele, percebe que está perdendo tempo precioso com sua família.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 49min</td></tr>
+            </table>
+        </li>
+
+        <li>
+            <a href="https://youtu.be/JtU7yUPIUyA?si=ynn4MDcyYWfY3MF4" target="_blank">
+                <img src="imagens/acampamento-do-barulho.jpg">
+            </a>
+            <table>
+                <tr><th>Acampamento do Barulho</th></tr>
+                <tr><td>Um acampamento cheio de confusão, brincadeiras e confusões engraçadas.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 40min</td></tr>
+            </table>
+        </li>
+    </ul>
+
+</body>
+</html>

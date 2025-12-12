@@ -1,0 +1,402 @@
+:root {
+    --frame-bg: #000000;
+    --frame-text: #ffffff;
+    --frame-accent: #ff6600;
+    --main-bg: #141414;
+    --container-color: #242424;
+    --text-light: #e5e5e5;
+    --accent-color: #e50914; 
+    --border-color: #444;
+    --shadow-color: rgba(0, 0, 0, 0.7);
+    --font-primary: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--main-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+body.romance {
+    --main-bg: #000000;
+    --container-color: #332430;
+    --accent-color: #d9538a;
+    --border-color: #5d3d54;
+}
+
+body.comedia {
+    --main-bg: #1a1a14;
+    --container-color: #333324;
+    --accent-color: #ffc107;
+    --border-color: #5d5d3d;
+}
+
+body.infantil {
+    --main-bg: #141a1c;
+    --container-color: #243330;
+    --accent-color: #00bcd4;
+    --border-color: #3d5d54;
+}
+
+body.acao {
+    --main-bg: #101010;
+    --container-color: #202020;
+    --accent-color: #e50914;
+    --border-color: #555;
+}
+
+body.formulario {
+    --main-bg: #141414;
+    --container-color: #242424;
+    --accent-color: #d40000;
+    --border-color: #444;
+}
+
+.page-title {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px var(--shadow-color);
+}
+
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-container {
+    background-color: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.movie-hero {
+    height: 180px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.movie-hero a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: var(--frame-text);
+    font-size: 1.5rem;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.movie-content {
+    padding: 20px;
+}
+
+.description-section, .details-section {
+    margin-bottom: 15px;
+}
+
+.movie-content h2 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.description-section p {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: justify;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.details-table td {
+    padding: 5px 0;
+}
+
+.details-table .label {
+    font-weight: bold;
+    color: var(--frame-text);
+    width: 30%;
+}
+
+.details-table .value {
+    color: var(--text-light);
+    text-align: right;
+    width: 70%;
+}
+
+.movie-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--container-color);
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+legend {
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-light);
+    font-weight: 500;
+    width: 30%;
+}
+
+.form-group input:not([type="checkbox"]), 
+.form-group select, 
+.form-group textarea {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--main-bg);
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 65%;
+    height: 8px;
+    background: var(--border-color);
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    cursor: pointer;
+    margin-top: -5.3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.form-group output {
+    display: inline-block;
+    width: 18%;
+    text-align: right;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+#classificacao-etaria {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+#classificacao-etaria.livre  { background-color: #0f9d58; }
+#classificacao-etaria.x10    { background-color: #1e88e5; }
+#classificacao-etaria.x12    { background-color: #fdd835; }
+#classificacao-etaria.x14    { background-color: #fb8c00; }
+#classificacao-etaria.x16    { background-color: #e53935; }
+#classificacao-etaria.x18    { background-color: #000000; }
+
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox-group label {
+    width: auto;
+    margin-right: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: color-mix(in srgb, var(--accent-color) 80%, black);
+}
+
+.header-frame {
+    background: var(--frame-bg); 
+    margin: 0; 
+    padding: 0 50px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 100%; 
+    border-bottom: 3px solid var(--accent-color); 
+}
+
+.header-frame h1 {
+    color: var(--accent-color); 
+    font-size: 2.2rem; 
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.header-frame h1::before {
+    content: "N";
+    color: #fff;
+    background-color: var(--accent-color);
+    padding: 0 5px;
+    margin-right: 2px;
+    border-radius: 2px;
+}
+
+.header-frame nav a {
+    color: var(--frame-text); 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-weight: 500; 
+    font-size: 1rem; 
+    transition: color 0.3s;
+}
+
+.header-frame nav a:hover {
+    color: var(--frame-accent); 
+} 
+
+.footer-frame {
+    background: var(--frame-bg); 
+    color: #777; 
+    margin: 0; 
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 0.85rem; 
+    border-top: 1px solid #333; 
+}
+
+.movie-container.the-kid .movie-hero { background-image: url('capas/the_kid.jpg'); }
+.movie-container.dr-caligari .movie-hero { background-image: url('capas/dr_caligari.jpg'); }
+
+.movie-container.mad-max .movie-hero { background-image: url('capas/mad_max.jpg'); }
+.movie-container.missao-impossivel .movie-hero { background-image: url('capas/missao_impossivel.jpg'); }
+
+.movie-container.the-hangover .movie-hero { background-image: url('capas/the_hangover.jpg'); }
+.movie-container.life-of-brian .movie-hero { background-image: url('capas/life_of_brian.jpg'); }
+
+.movie-container.the-notebook .movie-hero { background-image: url('capas/the_notebook.jpg'); }
+.movie-container.love-rosie .movie-hero { background-image: url('capas/love_rosie.jpg'); }
+
+.movie-container.toy-story .movie-hero { background-image: url('capas/toy_story.jpg'); }
+.movie-container.how-to-train-your-dragon .movie-hero { background-image: url('capas/how_to_train_your_dragon.jpg'); }
+
+@media (max-width: 768px) {
+    .header-frame {
+        padding: 0 15px;
+        flex-direction: column; 
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .header-frame h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .header-frame nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .header-frame nav a {
+        margin: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .catalogue-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}

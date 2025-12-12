@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Filmes Infantis</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+        }
+
+        li img {
+            width: 230px;
+            height: 310px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        li img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px black;
+        }
+
+        table {
+            margin: 10px auto 0 auto;
+            border-collapse: collapse;
+            width: 230px;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        td, th {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+
+        <li>
+            <a href="https://youtu.be/0bTWSuev3ew?si=uBekfQMEuS8OuiXC" target="_blank">
+                <img src="imagens/bee-moovie.jpg ">
+            </a>
+
+            <table>
+                <tr><th>Descrição</th></tr>
+                <tr><td>Um jovem zangão descobre o mundo humano e causa muitas confusões.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 35min</td></tr>
+            </table>
+        </li>
+
+        <li>
+            <a href="https://youtu.be/PAW_EY8S9Sc?si=45iC5MsExilf7Fz8" target="_blank">
+                <img src="imagens/chapeuzinho.jpg">
+            </a>
+
+            <table>
+                <tr><th>Descrição</th></tr>
+                <tr><td>A clássica história de mistérios e trapalhadas envolvendo o lobo e Chapeuzinho.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 21min</td></tr>
+            </table>
+        </li>
+
+        <li>
+            <a href="https://youtu.be/Ji9kVATf0p8?si=wKRINTyIyxrYeLtY" target="_blank">
+                <img src="imagens/rei-leao.jpg">
+            </a>
+
+            <table>
+                <tr><th>Descrição</th></tr>
+                <tr><td>Simba enfrenta desafios para assumir seu lugar como rei da savana.</td></tr>
+                <tr><th>Duração</th></tr>
+                <tr><td>1h 29min</td></tr>
+            </table>
+        </li>
+
+    </ul>
+
+</body>
+</html>
